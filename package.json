@@ -1,0 +1,31 @@
+{
+  "name": "interview",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "backend": "nodemon server/index.js",
+    "frontend": "npm run start --prefix client",
+    "dev": "concurrently \"npm run backend\" \"npm run start --prefix client\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.0",
+    "bootstrap": "^4.5.3",
+    "concurrently": "^5.3.0",
+    "cookie-parser": "^1.4.5",
+    "express": "^4.17.1",
+    "mongoose": "^5.10.13",
+    "node-cron": "^2.0.3",
+    "nodemon": "^2.0.6",
+    "react": "^17.0.1",
+    "react-datetime": "^3.0.4",
+    "react-dom": "^17.0.1",
+    "reactstrap": "^8.7.1",
+    "nodemailer": "^6.4.6",
+    "xoauth2": "^1.2.0"
+  }
+}
